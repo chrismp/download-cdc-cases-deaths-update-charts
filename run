@@ -1,2 +1,2 @@
 #!/bin/bash
-Rscript cases-deaths-by-state.r
+Rscript fl-cases-deaths-7-day-avg.r
