@@ -30,7 +30,7 @@ dir.create(o)
 
 write.csv(
   x = rb,
-  file = paste0(o,'/cases and deaths by state.csv'),
+  file = paste0(o,'/cases-and-deaths-by-state.csv'),
   na = '',
   row.names = F
 )
@@ -40,7 +40,7 @@ write.csv(
     .data = rb,
     state %in% c('CA','TX','FL','NY','IL')
   ),
-  file = paste0(o,'/cases and deaths for five biggest states.csv'),
+  file = paste0(o,'/cases-and-deaths-for-five-biggest-states.csv'),
   na = '',
   row.names = F
 )

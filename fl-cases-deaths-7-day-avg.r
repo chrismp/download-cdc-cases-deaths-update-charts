@@ -31,7 +31,7 @@ fl$new_deaths_7day_avg <- mvavg(
 
 write.csv(
   x = fl,
-  file = paste0(o,'/cases and deaths for Florida.csv'),
+  file = paste0(o,'/cases-and-deaths-for-Florida.csv'),
   na = '',
   row.names = F
 )
