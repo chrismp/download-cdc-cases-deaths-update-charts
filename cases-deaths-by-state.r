@@ -44,13 +44,3 @@ write.csv(
   na = '',
   row.names = F
 )
-
-write.csv(
-  x = filter(
-    .data = rb,
-    state == 'FL'
-  ),
-  file = paste0(o,'/cases and deaths for Florida.csv'),
-  na = '',
-  row.names = F
-)
