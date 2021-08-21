@@ -1,3 +1,5 @@
+library(dplyr)
+
 resourceID <- '9mfq-cb36'
 source('download-cdc-api-data/download.r')
 
