@@ -1,2 +1,2 @@
 #!/bin/bash
-Rscript fl-cases-deaths-7-day-avg.r
+Rscript update-charts.r
