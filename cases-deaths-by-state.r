@@ -1,29 +1,7 @@
-library(jsonlite)
-library(data.table)
-library(dplyr)
+resourceID <- '9mfq-cb36'
+source('download-cdc-api-data/download.r')
 
-limit <- 10000
-offset <- 0
-i <- 1
-l <- list()
-
-while(T){
-  url <- paste0('https://data.cdc.gov/resource/9mfq-cb36.json?$limit=',limit,'&$offset=',offset)
-  print(url)
-  d <- fromJSON(url)
-  
-  d$submission_date_formatted <- as.Date(d$submission_date)
-  
-  l[[i]] <- d
-  if(nrow(d)<limit) break
-  offset <- offset + limit
-  i <- i + 1
-}
-
-rb <- rbindlist(
-  l = l,
-  fill = T
-)
+rb$submission_date_formatted <- as.Date(rb$submission_date)
 
 o <- 'output'
 dir.create(o)
