@@ -5,18 +5,11 @@ library(DatawRappr)
 
 print("Starting chart updater")
 
-latestdate <- max(fl$submission_date_formatted)
-
-latestdate <- as.POSIXct(
-  x = max(fl$submission_date_formatted),
-  format = "%Y-%m-%d"
-)
-
 updateDateFormat <- gsub(
   pattern = " 0",
   replacement = ' ',
   x = format(
-    x = latestdate,
+    x = max(fl$submission_date_formatted),
     format = "%B %d, %Y"
   )
 )
