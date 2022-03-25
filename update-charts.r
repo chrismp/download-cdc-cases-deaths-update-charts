@@ -15,9 +15,9 @@ updateDateFormat <- gsub(
 )
 
 chartIDs <- c(
-  'gOqmg', # total cases
-  'IO4D3', # new cases
-  'B18iA' # total deaths
+  'q5syP', # total cases
+  'wGPJ0' # new cases
+  # 'B18iA' # total deaths
   # 'ULrmv' # new deaths
 )
 
