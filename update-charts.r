@@ -22,7 +22,7 @@ chartIDs <- c(
 )
 
 apikey <- Sys.getenv("DATAWRAPPER_API")
-
+print(updateDateFormat)
 for (id in chartIDs) {
   dw_edit_chart(
     chart_id = id,
