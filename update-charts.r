@@ -1,4 +1,4 @@
-source('fl-cases-deaths-7-day-avg.r')
+source('cases-deaths-by-state.r')
 # devtools::install_github("munichrocker/DatawRappr",ref="master")
 
 library(DatawRappr)
@@ -9,7 +9,7 @@ updateDateFormat <- gsub(
   pattern = " 0",
   replacement = ' ',
   x = format(
-    x = max(fl$submission_date_formatted),
+    x = max(rb$submission_date_formatted),
     format = "%B %d, %Y"
   )
 )
@@ -36,6 +36,3 @@ for (id in chartIDs) {
     return_urls = TRUE
   )  
 }
-
-
-
