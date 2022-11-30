@@ -1,4 +1,4 @@
-source('fl-cases-deaths-7-day-avg.r')
+source('cases-deaths-by-state.r')
 # devtools::install_github("munichrocker/DatawRappr",ref="master")
 
 library(DatawRappr)
