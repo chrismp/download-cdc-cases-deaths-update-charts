@@ -5,14 +5,20 @@ library(DatawRappr)
 
 print("Starting chart updater")
 
-updateDateFormat <- gsub(
-  pattern = " 0",
-  replacement = ' ',
-  x = format(
-    x = max(rb$submission_date_formatted),
-    format = "%B %d, %Y"
-  )
+#updateDateFormat <- gsub(
+#  pattern = " 0",
+#  replacement = ' ',
+#  x = format(
+#    x = max(rb$end_date),
+#    format = "%B %d, %Y"
+#  )
+#)
+
+updateDateFormat <- format(
+  x = max(rb$end_date),
+  format = "%B %d, %Y"
 )
+
 
 chartIDs <- c(
   'q5syP', # total cases
