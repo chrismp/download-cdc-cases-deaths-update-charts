@@ -22,8 +22,8 @@ updateDateFormat <- format(
 
 chartIDs <- c(
   'q5syP', # total cases
-  'wGPJ0' # new cases
-  # 'B18iA' # total deaths
+  'wGPJ0', # new cases
+  'kpOQ6' # total deaths
   # 'ULrmv' # new deaths
 )
 
