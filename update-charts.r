@@ -15,7 +15,7 @@ print("Starting chart updater")
 #)
 
 updateDateFormat <- format(
-  x = max(rb$end_date),
+  x = max(rb$update_date_formatted),
   format = "%B %d, %Y"
 )
 
@@ -28,7 +28,7 @@ chartIDs <- c(
 )
 
 apikey <- Sys.getenv("DATAWRAPPER_API")
-print(updateDateFormat)
+# print(updateDateFormat)
 for (id in chartIDs) {
   dw_edit_chart(
     chart_id = id,

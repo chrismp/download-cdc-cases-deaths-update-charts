@@ -4,7 +4,7 @@ library(dplyr)
 resourceID <- 'pwn4-m3yp'
 source('download-cdc-api-data/download.r')
 
-#rb$submission_date_formatted <- as.Date(rb$submission_date)
+rb$update_date_formatted <- as.Date(rb$date_updated)
 
 o <- 'output'
 dir.create(o)
@@ -30,7 +30,7 @@ write.csv(
   x = filter(
     .data = rb,
     state == 'FL',
-    date_updated >= '2020-03-01'
+    update_date_formatted >= '2020-03-01'
   ),
   file = paste0(o,'/wkly-cases-and-deaths-for-Florida.csv'),
   na = '',
